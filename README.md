@@ -4,6 +4,3 @@
 - [model thinker](model_thinker.html)
 - [costos presos 27373 rmd](costo_presos_23737_notebook.Rmd)
 - [costos presos otro repo](costo_presos_23737_notebook.nb.html)
-
-- [pruebacostos](../planificacion-estrategica/costos23737/costo_presos_23737_notebook.nb.html)
-- [pruebacostos](./planificacion-estrategica/costos23737/costo_presos_23737_notebook.nb.html)
