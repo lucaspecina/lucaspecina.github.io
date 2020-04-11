@@ -1,4 +1,8 @@
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <head>
+    ...
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  </head>
 
 - [tracking data futbol](futbol-trackingdata (1).html)
 - [model thinker](model_thinker.html)
