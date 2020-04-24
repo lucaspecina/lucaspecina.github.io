@@ -5,8 +5,6 @@
 
 ## otros
 **[tracking data futbol](futbol-trackingdata (1).html)**
+[ultimaprueba](datosnuevos-interactivo.ipynb)
 
 **[model thinker](model_thinker.html)**
-
-
-[probar widgets](html interactivo.html)
