@@ -9,4 +9,4 @@
 **[model thinker](model_thinker.html)**
 
 
-[probar widgets](datosnuevos-interactivo.html)
+[probar widgets](datosnuevos-interactivo.ipynb)
