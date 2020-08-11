@@ -9,9 +9,9 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Your Name"
+title                    : "Lucas Pecina"
 title_separator          : "-"
-name                     : "Your Name"
+name                     : "Lucas Pecina"
 description              : "Data Science Portfolio"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -84,11 +84,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : "/images/bio-pic-2.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Data Science Portfolio"
-  location         : "Your Location"
-  email            :
+  name             : "Lucas Pecina"
+  avatar           : "/images/Captura de Pantalla 2020-04-11 a la(s) 04.21.10.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Data Science"
+  location         : "Argentina"
+  email            : "lucaspecina@gmail.com
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
@@ -97,19 +97,19 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "Your Github"
+  github           : "lucaspecina"
   gitlab           :
   google_plus      :
   keybase          :
-  instagram        :
+  instagram        : "lucaspecina"
   lastfm           :
-  linkedin         : "dataoptimal" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  linkedin         : "lucas-pecina-00a115104" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          :
+  twitter          : "lucaspecina"
   vine             :
   weibo            :
   xing             :
