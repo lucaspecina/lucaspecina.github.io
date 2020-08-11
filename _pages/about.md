@@ -2,7 +2,7 @@
 title: "About"
 permalink: /about/
 header:
-  image: "/images/IMG_7863.JPG"
+  image: "/images/IMG_8668.jpg"
 ---
 
 cientifico de datos, racional, bilardista, etc
