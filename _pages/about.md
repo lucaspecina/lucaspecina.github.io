@@ -2,10 +2,10 @@
 title: "About"
 permalink: /about/
 header:
-  image: "/images/IMG_9457.JPG"
+  image: "/images/zakim.jpg"
 ---
 
-cientifico de datos, etc
+cientifico de datos, racional, bilardista, etc
 
 ah, tambien abogado
 
