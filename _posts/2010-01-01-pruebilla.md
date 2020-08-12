@@ -1,8 +1,8 @@
 ```python
-# import plotly.express as px
-# import plotly.offline as py_offline
-# import plotly.graph_objs as go
-# py_offline.init_notebook_mode()
+import plotly.express as px
+import plotly.offline as py_offline
+import plotly.graph_objs as go
+py_offline.init_notebook_mode()
 ```
 
 
@@ -15,11 +15,8 @@ py.iplot(fig,filename='pruebaloca')
 ```
 
 
-
-
-
 <iframe
-    width="100%"
+    width="150%"
     height="600px"
     src="https://plotly.com/~lucaspecina/3.embed"
     frameborder="0"
@@ -27,24 +24,3 @@ py.iplot(fig,filename='pruebaloca')
 ></iframe>
 
 
-
-
-
-```python
-
-```
-
-
-```python
-
-```
-
-
-```python
-
-```
-
-
-```python
-
-```
