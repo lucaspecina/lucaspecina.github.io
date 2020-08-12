@@ -29,14 +29,14 @@ Tal como aparece en el github del SNEEP https://github.com/datos-justicia-argent
 El censo recaba la siguiente información sobre cada interno: edad, sexo, nacionalidad, estado civil, nivel de instrucción, situación laboral, lugar de residencia, jurisdicción judicial, situación legal, fecha de detención, fecha de condena, establecimiento de procedencia, tipo de delitos imputado, participación en trabajo remunerado, en actividades de capacitación laboral, en actividades recreativas, asistencia médica, vistas, alteraciones al orden, sanciones disciplinarias, calificaciones de conducta, tentativas de fugas o evasiones, tentativa de suicidios, lesiones recibidas, duración de la condena, medidas de seguridad, reincidencia, régimen de progresividad, salidas transitorias, régimen de semilibertad, programe de prelibertad, prisión discontinua, semidetención, reducción de pena, mujeres alojadas con sus hijos.
 
 
-```
+```r
 #sneep_unificado <- read_csv("sneep-unificado-2002-2018.csv")
 
 head(sneep_unificado)
 ```
 
 
-```
+```r
 colnames(sneep_unificado)
 ```
 
@@ -50,7 +50,7 @@ Para filtrar y dejar solo los datos que nos interesan, seguiremos la siguiente s
 
 - Luego, detectamos que hay diversos establecimientos que no son de competencia de la PBA, sino Federales y de otros lugares. Para eliminarlos del dataset, identificamos aquellos establecimientos segun su id que contengan la palabra FEDERAL, SPF o FED. Uso la variable **establecimiento_id (int)**: código del establecimiento penitenciario. 
 
-```{r echo=TRUE}
+```r
 establecimientos  <- sneep_unificado %>% filter(jurisdiccion_id==1 & anio_censo>=2005 &
    (delito1_descripcion=='Infracción ley n° 23.737 (estupefacientes)' | delito2_descripcion=='Infracción ley n° 23.737 (estupefacientes)' | 
     delito3_descripcion=='Infracción ley n° 23.737 (estupefacientes)' | delito4_descripcion=='Infracción ley n° 23.737 (estupefacientes)' |
@@ -65,7 +65,7 @@ print(establecimientos)
 
 > El dataset principal que usaremos queda conformado de la siguiente manera
 
-```{r echo=TRUE}
+```r
 ley23737 <- sneep_unificado %>% filter(jurisdiccion_id==1 & provincia_sneep_id==1 & anio_censo>=2005 & 
         (delito1_descripcion=='Infracción ley n° 23.737 (estupefacientes)' | delito2_descripcion=='Infracción ley n° 23.737 (estupefacientes)' | 
          delito3_descripcion=='Infracción ley n° 23.737 (estupefacientes)' | delito4_descripcion=='Infracción ley n° 23.737 (estupefacientes)' |
@@ -81,7 +81,7 @@ head(ley23737, 10)
 
 Para tener una idea general, contamos la cantidad de presos/as por año que hubo por infracciones a la ley 23737.
 
-```{r echo=TRUE}
+```r
 cuantos_por_anio <- ley23737 %>% group_by(anio_censo) %>% summarise(presos_ley23737= n())
 
 print(cuantos_por_anio)
@@ -90,7 +90,7 @@ print(cuantos_por_anio)
 
 Esto lo comparamos sobre el total de presos/as para todos los delitos. Esto lo hacemos por cada año
 
-```{r echo=TRUE}
+```r
 cantidad_delitos_poranio <- sneep_unificado %>% filter(jurisdiccion_id==1 & provincia_sneep_id==1 & anio_censo>=2005 & 
                                                          !establecimiento_id %in% c(63,64,65,67,68,70,87,89,350,358,505,537) &
                                                          !establecimiento_id %in% c(66,71,72,73,74,75,76,78,84,85,86,88,90,91,92)) %>% 
@@ -101,7 +101,7 @@ print(cantidad_delitos_poranio)
 
 Graficamos la evolucion temporal
 
-```{r echo=TRUE}
+```r
 cantidades_presos_total_ley23737 <- cuantos_por_anio %>% inner_join(cantidad_delitos_poranio, by='anio_censo') %>% gather('poblacion','cantidad_presos',-anio_censo)
 
 ggplot(cantidades_presos_total_ley23737, aes(x = anio_censo, y = cantidad_presos, colour = poblacion)) + 
@@ -111,12 +111,12 @@ ggplot(cantidades_presos_total_ley23737, aes(x = anio_censo, y = cantidad_presos
 
 Ahora es necesario cargar la informacion sobre los presupuestos destinados al sistema penitenciario de la PBA en cada año. El presupuesto se extrajo de la información brindada por la Dirección Provincial de Presupuesto Público, disponible en https://www.gba.gob.ar/hacienda_y_finanzas/direccion_provincial_de_presupuesto_publico
 
-```{r echo=TRUE}
+```r
 #presupuesto_spb <- read_excel("presupuesto_spb_por_año.xlsx")
 print(presupuesto_spb)
 ```
 
-```{r echo=TRUE}
+```r
 #presupuesto_spb <- read_excel("presupuesto_spb_por_año.xlsx")
 ggplot(presupuesto_spb, aes(x = anio, y = presupuesto)) + 
     geom_smooth() + geom_point() + scale_x_continuous("Fecha",breaks = seq(2005,2018,1)) + ggtitle("Evolución temporal del presupuesto del SPB") + xlab("Año") + ylab("Pesos argentinos")
@@ -136,7 +136,7 @@ El trabajo consistira de tres metodos de estimacion de los costos de presos/as p
 
 Para aproximar los costos de los presos/as por infraccion a la ley 23737, se calcula la proporcion de este subconjunto de individuos sobre la totalidad de individuos. Luego se utiliza esa proporcion sobre el presupuesto destinado en ese año para estimar el monto destinado a dicho subconjunto.
 
-```{r echo=TRUE}
+```r
 #aca calculo la proporcion de presos por droga sobre el total de presos para cada año
 ley23737_sobre_total <- cuantos_por_anio %>% inner_join(cantidad_delitos_poranio, by='anio_censo')
 
@@ -153,7 +153,7 @@ print(ley23737_sobre_total)
 
 Nos queda agregar los datos de 2019. Como expuse anteriormente, los datos fueron extraidos de la Dirección General de Asistencia y Tratamiento SPB / Dirección Provincial de Alcaídas Departamentales. Lo agregamos al conjunto de datos que venimos trabajando
 
-```{r echo=TRUE}
+```r
 data_2019 <- c(2019,	4915,	45366,	0.108341,	23417065600	) # estos son los datos (ordenados segun las columnas de droga_sobre_total)
 
 ley23737_sobre_total <- rbind(ley23737_sobre_total, data_2019)
@@ -165,14 +165,14 @@ print(ley23737_sobre_total)
 Por ultimo, debemos corregir los costos por la inflacion, para saber a cuanto equivale al valor del peso actual (marzo 2020). Tomamos los costos para los presos/as por infraccion a la ley 23737 y los actualizamos en función del Indice de Precios del Instituto de Trabajo y Economia, de la Fundacion German Abdala.
 
 Cargo datos de inflacion
-```{r echo=TRUE}
+```r
 #indice_precios_consumidor <- read_excel("C:/Users/Usuario/Desktop/Lucas/1- pe/5-presos/DATA/indice_precios_consumidor.xlsx")
 print(indice_precios_consumidor)
 ```
 
 Se utiliza la formula acumulada: precio_anterior*(1+porcentaje_variacion_mensual) para calcularlo.
 
-```{r echo=TRUE}
+```r
 #primero hago join con anios_meses
 metodo1 <- ley23737_sobre_total %>% inner_join(anios_meses %>% filter(anio>2005 | mes==12),by='anio') %>% mutate(presupuesto_mensual=presupuesto/12) %>%
   mutate(costo_presos23737_mensual= presupuesto_mensual*presos_23737_relativo)
@@ -191,7 +191,7 @@ print(metodo1)
 ```
 
 Agrupo por años y resumo la informacion.
-```{r echo=TRUE}
+```r
 metodo1_agrupado <- metodo1 %>% group_by(anio) %>% summarise(presos_total_31dic=first(presos_total), 
                                                                    presos_23737_31dic=first(presos_ley23737),
                                                                    presupuesto=first(presupuesto),
@@ -203,14 +203,14 @@ print(metodo1_agrupado)
 ```
 
 Grafico los costos.
-```{r echo=TRUE}
+```r
 ggplot(metodo1_agrupado, aes(anio, costo_presos23737_anual_actualizado)) + geom_point()  + geom_text(aes(label=costo_presos23737_anual_actualizado),hjust=0, vjust=0) + geom_smooth() + scale_x_continuous(breaks=metodo1_agrupado$anio) + ggtitle("Costos estimados destinados a presos/as por infracción a la ley 23737") + xlab("Año") + ylab("Costos (presos/as por infracción a la ley 23737)")
 ```
 
 **COSTO FINAL DE PRESOS/AS POR INFRACCION A LA LEY 23737 (2005/2019) - METODO 1**
 
 Sumo todos los años para que nos de el costo total:
-```{r echo=TRUE}
+```r
 print(paste('Usando el Metodo 1 (valores al 31 dic), el costo total (2005-2019) de los presos/as por infraccion a la ley 23737: $', sum(metodo1$costo_presos23737_mensual)))
 print(paste('Usando el Metodo 1 (valores al 31 dic), el costo total (2005-2019) de los presos/as por infraccion a la ley 23737, actualizado por inflacion es: $', sum(metodo1$costo_presos23737_mensual_actualizado)))
 ```
@@ -219,7 +219,7 @@ print(paste('Usando el Metodo 1 (valores al 31 dic), el costo total (2005-2019) 
 ### **Metodo 2: Imputacion mensual por aproximaciones lineales**
 
 Comenzamos con la copia del conjunto de datos que realizamos anteriormente
-```{r echo=TRUE}
+```r
 # ley23737_sobre_total_copia <- ley23737_sobre_total
 colnames(ley23737_sobre_total_copia) <- c('anio','presos_ley23737','presos_total')
 
@@ -230,7 +230,7 @@ Lo que queremos hacer es "simular" para cada mes de cada año cuantos presos hay
 
 Para eso comienzo haciendo un join con un dataset que contiene la estructura buscada
 
-```{r echo=TRUE}
+```r
 para_calculo_23737 <- c(6,6,334,1010,1462,1696,2113,2500,2534,2544,2435,2616,2642,3730)
 ley23737_sobre_total_copia['cantidad_anterior_23737'] <- para_calculo_23737
 
@@ -246,7 +246,7 @@ print(metodo2_23737)
 ```
 
 Visualizo como quedaria conformado el valor de cada mes. En los siguientes graficos, cada punto es un mes particular. Estos siguien una linea recta desde un año al siguiente. Utilizaremos estas cifras como estimaciones mensuales.
-```{r echo=TRUE, warning=FALSE}
+```r
 # creo una variable de fecha
 library(zoo)
 metodo2_23737$fecha <- as.Date(as.yearmon(paste(metodo2_23737$anio,metodo2_23737$mes), '%Y %m'))
@@ -262,14 +262,14 @@ ggplot(metodo2_23737 %>% mutate(id = row_number()) %>% select(c('fecha','presos_
 ```
 
 Uso el conjunto de datos de presupuestos de spb y le agrego 2019
-```{r echo=TRUE, warning=FALSE}
+```r
 presupuesto_spb_2 <- presupuesto_spb
 presupuesto_spb_2 <- presupuesto_spb_2 %>% rbind(c(2019,23417065600))
 print(presupuesto_spb_2)
 ```
 
 Calculo la proporcion de presos por ley 23737 sobre los presos totales. Dejo solo a partir de diciembre de 2005. Creo el presupuesto mensual y lo uso para obtener el costo de presos/as por infraccion a la ley 23737 mensual.
-```{r echo=TRUE, warning=FALSE}
+```r
 metodo2_23737 <- metodo2_23737 %>% mutate(presos_23737_relativo=presos_ley23737_mensual/presos_total_mensual) %>% inner_join(presupuesto_spb_2, by='anio')
 metodo2_23737 <- metodo2_23737 %>% filter(anio > 2005 | mes==12)
 metodo2_23737 <- metodo2_23737 %>% mutate(presupuesto_mensual = presupuesto/12)
@@ -278,13 +278,13 @@ print(metodo2_23737)
 ```
 
 Grafico las distintas proporciones de presos/as por ley 23737 sobre el total de presos. La linea roja es la media de las proporciones.
-```{r echo=TRUE, warning=FALSE}
+```r
 ggplot(metodo2_23737, aes(x=fecha ,y=presos_23737_relativo)) + geom_point() + geom_line() + ggtitle("Proporcion de presos/as por ley 23737 sobre el total")  + ylab("Cantidad de presos/as") + scale_x_date('Fecha',breaks=seq.Date(from = min(metodo2_23737$fecha), to = max(metodo2_23737$fecha), by = "1 year"), date_labels = '%Y') + geom_hline(yintercept=mean(metodo2_23737$presos_23737_relativo), linetype="dashed", color = "red")
 ```
 
 Calcular la inflacion: Utilizo la funcion anteriormente construida para estos nuevos datos.
 
-```{r echo=TRUE}
+```r
 actualizados <- c()
 for(i in 1:nrow(metodo2_23737)){
   presupuesto <- metodo2_23737$costo_presos23737_mensual[i]
@@ -294,14 +294,14 @@ for(i in 1:nrow(metodo2_23737)){
 ```
 
 Lo agrego como una nueva columna.
-```{r echo=TRUE, warning=FALSE}
+```r
 metodo2_23737['costo_presos23737_mensual_actualizado'] <- actualizados
 
 print(metodo2_23737)
 ```
 
 Agrupo por año y calculo lo necesario
-```{r echo=TRUE, warning=FALSE}
+```r
 metodo2_agrupado <- metodo2_23737 %>% group_by(anio) %>% summarise(presos_total_31dic=first(presos_total), 
                                                            presos_23737_31dic=first(presos_ley23737),
                                                            presos_total_media_lineal= mean(presos_total_mensual),
@@ -318,7 +318,7 @@ print(metodo2_agrupado)
 **COSTO FINAL DE PRESOS/AS POR INFRACCION A LA LEY 23737 (2005/2019)**
 
 Sumo todos los años para que nos de el costo total:
-```{r echo=TRUE, warning=FALSE}
+```r
 print(paste('Usando el Metodo 2 (aproximaciones lineales), el costo total (2005-2019) de los presos/as por infraccion a la ley 23737: ', sum(metodo2_agrupado$costo_presos23737_anual)))
 print(paste('Usando el Metodo 2 (aproximaciones lineales), el costo total (2005-2019) de los presos/as por infraccion a la ley 23737, actualizado por inflacion es: ', sum(metodo2_agrupado$costo_presos23737_anual_actualizado)))
 ```
@@ -327,7 +327,7 @@ print(paste('Usando el Metodo 2 (aproximaciones lineales), el costo total (2005-
 
 Para este caso, imputo la cantidad de presos por mes segun la media entre el valor del 31 de diciembre del año en tratamiento con el valor del 31 de diciembre del año anterior: (año_anterior+año_actual)/2
 
-```{r echo=TRUE}
+```r
 metodo3 <- metodo2_23737 %>% group_by(anio) %>% mutate(presos_total_promedio= (presos_total+cantidad_anterior_total)/2,
                                                        presos_23737_promedio= (presos_ley23737+cantidad_anterior_23737)/2)
 metodo3 <- metodo3 %>% mutate(presos_23737_relativo_promedio= presos_23737_promedio/presos_total_promedio) %>% 
@@ -336,7 +336,7 @@ print(metodo3)
 ```
 
 Actualizo por inflacion y agrupo por año
-```{r echo=TRUE}
+```r
 actualizados <- c()
 for(i in 1:nrow(metodo3)){
   presupuesto <- metodo3$costo_presos23737_mensual_promedio[i]
@@ -355,7 +355,7 @@ print(metodo3_agrupado)
 **COSTO FINAL DE PRESOS/AS POR INFRACCION A LA LEY 23737 (2005/2019)**
 
 Sumo todos los años para que nos de el costo total:
-```{r echo=TRUE}
+```r
 sum(metodo3$costo_presos23737_mensual_promedio_actualizado)
 ```
 
@@ -364,7 +364,7 @@ sum(metodo3$costo_presos23737_mensual_promedio_actualizado)
 ## Diagnostico
 
 Por ultimo vemos una tabla comparativa para cada año segun los tres metodos utilizados
-```{r echo=TRUE}
+```r
 comparacion_metodos <- as.data.frame(ley23737_sobre_total$anio %>% 
   cbind(metodo1 %>% group_by(anio) %>% summarise(metodo1= sum(costo_presos23737_mensual_actualizado)) %>% select(metodo1)) %>%
   cbind(metodo2_23737 %>% group_by(anio) %>% summarise(metodo2_23737= sum(costo_presos23737_mensual_actualizado)) %>% select(metodo2_23737)) %>%
@@ -375,7 +375,7 @@ print(comparacion_metodos)
 ```
 
 Comparo graficamente el metodo 1 y 2
-```{r echo=TRUE}
+```r
 ggplot(comparacion_metodos %>% select(-metodo3_promedio) %>% gather('metodo','costo_presos23737_actualizado',-anio), aes(x = anio, y = costo_presos23737_actualizado)) +
     geom_line(aes(colour = metodo), size = 2)+
     geom_point(colour = 'royalblue', size = 3)+
@@ -386,7 +386,7 @@ ggplot(comparacion_metodos %>% select(-metodo3_promedio) %>% gather('metodo','co
 ```
 
 El primer metodo se diferencia un poco mas de los otros dos, sobre todo en los primeros años. Sin embargo, cuando vemos el total acumulado, estos tres metodos tienen una distancia maxima que no llega al 4% de diferencia, lo que demuestra la robustez del modelo.
-```{r echo=TRUE}
+```r
 print(paste('Costos de presos/as por infraccion a la ley 23737 actualizado segun METODO 1 (imputacion al 31 dic): $',sum(comparacion_metodos$metodo1_31dic)))
 print(paste('Costos de presos/as por infraccion a la ley 23737 actualizado segun METODO 2 (imputacion lineal por mes): $',sum(comparacion_metodos$metodo2_lineal)))
 print(paste('Costos de presos/as por infraccion a la ley 23737 actualizado segun METODO 3 (imputacion por promedio): $',sum(comparacion_metodos$metodo3_promedio)))
