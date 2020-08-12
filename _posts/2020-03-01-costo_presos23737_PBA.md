@@ -1,6 +1,6 @@
 ---
 title: "Costos de la Provincia de Buenos Aires de presos/as por infracción a la ley 23737 (2005-2019)"
-output: html_notebook
+output: md_document
 ---
 Por **Lucas Pecina** lucaspecina@gmail.com
 
