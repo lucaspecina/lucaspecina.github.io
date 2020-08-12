@@ -8,7 +8,7 @@ Por **Lucas Pecina** lucaspecina@gmail.com
 
 Este trabajo fue realizado utilizando el lenguaje R. Es totalmente reproducible. Para consultas sobre los datos y otras partes del código, pueden escribir al mail señalado arriba.
 
-```{r echo=TRUE}
+```r
 library(dplyr)
 library(ggplot2)
 library(tidyr)
