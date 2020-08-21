@@ -13248,10 +13248,10 @@ div#notebook {
 
  
  
-<div id="1eaa1512-6537-47e5-9c06-b1f22c056d2e"></div>
+<div id="41ba37e8-a457-43f8-968d-e577b00150a4"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#1eaa1512-6537-47e5-9c06-b1f22c056d2e');
+var element = $('#41ba37e8-a457-43f8-968d-e577b00150a4');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "aca66740dad64eca9b79ddea15f9c206", "version_major": 2, "version_minor": 0}
@@ -13269,6 +13269,290 @@ var element = $('#1eaa1512-6537-47e5-9c06-b1f22c056d2e');
 
 <div class="output_text output_subarea ">
 <pre>&lt;function __main__.plotear(piso_w=8000, pend_w=100, tope_w=60000)&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>piso</th>
+      <th>pend</th>
+      <th>tope</th>
+      <th>limite</th>
+      <th>costo_nuevo</th>
+      <th>costo_viejo</th>
+      <th>diferencia_metodo</th>
+      <th>diferencia_limite_boot</th>
+      <th>media_boot</th>
+      <th>std_boot</th>
+      <th>...</th>
+      <th>MITAD_MAS_95_IC_inferior</th>
+      <th>MITAD_MAS_media_boot</th>
+      <th>MITAD_MAS_std_boot</th>
+      <th>MITAD_MAS_porcentaje_inferior_0</th>
+      <th>FIJO20_diferencia_limite_boot</th>
+      <th>FIJO20_80_IC_inferior</th>
+      <th>FIJO20_95_IC_inferior</th>
+      <th>FIJO20_media_boot</th>
+      <th>FIJO20_std_boot</th>
+      <th>FIJO20_porcentaje_inferior_0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>6000</td>
+      <td>50</td>
+      <td>50000</td>
+      <td>1500000</td>
+      <td>477300</td>
+      <td>686400</td>
+      <td>209100</td>
+      <td>[582000, 715000, 796350, 662450, 959200, 80550...</td>
+      <td>850126.0</td>
+      <td>133915.814876</td>
+      <td>...</td>
+      <td>611769.625</td>
+      <td>778573.0</td>
+      <td>68173.754268</td>
+      <td>0.0</td>
+      <td>[1031400, 1060250, 970100, 1074500, 1002250, 1...</td>
+      <td>911318.3</td>
+      <td>911192.075</td>
+      <td>1019889.0</td>
+      <td>51420.477720</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>6000</td>
+      <td>50</td>
+      <td>60000</td>
+      <td>1500000</td>
+      <td>477300</td>
+      <td>686400</td>
+      <td>209100</td>
+      <td>[720750, 565500, 839650, 788150, 643200, 10023...</td>
+      <td>834450.5</td>
+      <td>125760.057549</td>
+      <td>...</td>
+      <td>612383.025</td>
+      <td>775929.0</td>
+      <td>58515.165633</td>
+      <td>0.0</td>
+      <td>[969550, 1089450, 1079450, 1014250, 1040650, 9...</td>
+      <td>891153.4</td>
+      <td>890663.350</td>
+      <td>1018129.5</td>
+      <td>57950.048790</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6000</td>
+      <td>50</td>
+      <td>75000</td>
+      <td>1500000</td>
+      <td>477300</td>
+      <td>686400</td>
+      <td>209100</td>
+      <td>[712850, 513800, 1041300, 862150, 872100, 9396...</td>
+      <td>852733.5</td>
+      <td>118138.228795</td>
+      <td>...</td>
+      <td>618389.875</td>
+      <td>783556.5</td>
+      <td>62651.718115</td>
+      <td>0.0</td>
+      <td>[992600, 1032750, 1025250, 1035100, 974700, 10...</td>
+      <td>853850.8</td>
+      <td>852425.200</td>
+      <td>1021892.5</td>
+      <td>54751.019796</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>6000</td>
+      <td>100</td>
+      <td>50000</td>
+      <td>1500000</td>
+      <td>702000</td>
+      <td>686400</td>
+      <td>-15600</td>
+      <td>[582800, 375600, 297300, 542300, 371400, 70130...</td>
+      <td>523856.0</td>
+      <td>183908.034800</td>
+      <td>...</td>
+      <td>205418.750</td>
+      <td>437643.0</td>
+      <td>80848.756645</td>
+      <td>0.0</td>
+      <td>[951800, 775100, 786400, 735900, 809500, 78150...</td>
+      <td>670058.4</td>
+      <td>669939.600</td>
+      <td>791187.0</td>
+      <td>59956.888937</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>6000</td>
+      <td>100</td>
+      <td>60000</td>
+      <td>1500000</td>
+      <td>752000</td>
+      <td>686400</td>
+      <td>-65600</td>
+      <td>[796400, 344000, 588800, 659700, 360000, 32030...</td>
+      <td>457326.0</td>
+      <td>192502.005506</td>
+      <td>...</td>
+      <td>103360.100</td>
+      <td>373974.0</td>
+      <td>95135.211799</td>
+      <td>0.0</td>
+      <td>[760100, 721500, 536000, 904000, 768200, 72750...</td>
+      <td>548771.0</td>
+      <td>539192.750</td>
+      <td>744384.0</td>
+      <td>75215.884918</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 31 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">px</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;media_boot&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+        
+        
+            <div id="2d7175bb-472b-4b48-99db-0c9dc25b9095" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <script type="text/javascript">
+                require(["plotly"], function(Plotly) {
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    
+                if (document.getElementById("2d7175bb-472b-4b48-99db-0c9dc25b9095")) {
+                    Plotly.newPlot(
+                        '2d7175bb-472b-4b48-99db-0c9dc25b9095',
+                        [{"alignmentgroup": "True", "bingroup": "x", "hovertemplate": "media_boot=%{x}<br>count=%{y}<extra></extra>", "legendgroup": "", "marker": {"color": "#636efa"}, "name": "", "offsetgroup": "", "orientation": "v", "showlegend": false, "type": "histogram", "x": [850126.0, 834450.5, 852733.5, 523856.0, 457326.0, 373631.0, 309474.5, 292048.5, 105310.5, 242804.0, 62386.0, -119710.0, 150402.5, -50305.0, -236240.0, 118030.0, -105285.0, -355653.0, 135691.0, -117225.0, -423959.0, 766938.5, 772289.5, 777944.0, 498198.0, 395402.0, 301630.0, 291483.0, 236357.5, 80714.0, 213034.0, 19604.0, -142120.0, 135117.5, -54262.5, -326915.0, 88677.0, -126966.0, -452215.0, 79627.0, -152751.0, -462977.0, 711771.5, 727320.5, 724293.0, 459212.0, 377917.0, 252031.0, 296486.0, 138646.5, 26935.0, 171490.0, -6246.0, -214884.0, 160285.0, -113460.0, -339580.0, 87162.0, -135368.0, -422197.0, 133810.0, -130197.5, -474102.5, 671190.0, 681220.0, 667156.0, 381390.0, 317003.0, 238019.0, 205463.5, 152925.0, -39912.0, 189508.0, -20026.0, -218948.0, 113557.5, -33700.0, -309787.5, 107758.0, -203520.0, -416970.0, 104043.5, -190252.0, -561771.0, 555301.0, 533314.5, 568839.0, 298964.0, 213910.0, 116708.0, 168681.5, 40231.0, -99571.0, 102538.0, -32224.0, -272654.0, 92445.0, -103577.5, -385477.5, 84296.0, -180639.0, -460042.0, 40954.0, -207499.0, -554151.0], "xaxis": "x", "yaxis": "y"}],
+                        {"barmode": "relative", "legend": {"tracegroupgap": 0}, "margin": {"t": 60}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "title": {"text": "media_boot"}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "count"}}},
+                        {"responsive": true}
+                    ).then(function(){
+                            
+var gd = document.getElementById('2d7175bb-472b-4b48-99db-0c9dc25b9095');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })
+                };
+                });
+            </script>
+        </div>
 </div>
 
 </div>
