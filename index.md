@@ -6,7 +6,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ## Contenido
 
-[Pagos a jurados](https://github.com/lucaspecina/lucaspecina.github.io/blob/master/pagos_interactivo.ipynb)
+[Pagos a jurados](https://raw.githubusercontent.com/lucaspecina/lucaspecina.github.io/master/pagos_interactivo.ipynb)
 
 
 ### Markdown
