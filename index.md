@@ -1,8 +1,4 @@
-## Lucas Pecina
-
-data sci
-
-## Cosas
+### cosas
 
 - [Pagos a jurados](https://lucaspecina.github.io/posts/pagos_interactivo.html)
 
