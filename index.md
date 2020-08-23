@@ -10,3 +10,4 @@ data sci
 
 [Y este?](https://lucaspecina.github.io/posts/pagos_interactivo.ipynb)
 
+...
