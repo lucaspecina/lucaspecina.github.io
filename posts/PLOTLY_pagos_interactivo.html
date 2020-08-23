@@ -13112,7 +13112,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13120,28 +13120,10 @@ div#notebook {
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/Users/lucaspecina/anaconda3/lib/python3.7/site-packages/statsmodels/tools/_testing.py:19: FutureWarning: pandas.util.testing is deprecated. Use the functions in the public API at pandas.testing instead.
-  import pandas.util.testing as tm
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13156,7 +13138,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/lucaspecina/planificacion-estrategica/master/pagos-jurados/NUEVO2020_simulaciones_CONVECTORES_bootstrap_version4.csv&#39;</span><span class="p">)</span>
@@ -13182,7 +13164,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plotear</span><span class="p">(</span><span class="n">piso_w</span><span class="o">=</span><span class="mi">8_000</span><span class="p">,</span><span class="n">pend_w</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">tope_w</span><span class="o">=</span><span class="mi">60_000</span><span class="p">):</span>
@@ -13248,13 +13230,13 @@ div#notebook {
 
  
  
-<div id="41ba37e8-a457-43f8-968d-e577b00150a4"></div>
+<div id="5d8ef5f8-7dc9-4e1d-8151-652f624d49fb"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#41ba37e8-a457-43f8-968d-e577b00150a4');
+var element = $('#5d8ef5f8-7dc9-4e1d-8151-652f624d49fb');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "aca66740dad64eca9b79ddea15f9c206", "version_major": 2, "version_minor": 0}
+{"model_id": "9602d0f5b75b411bb94377326c6d9f79", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -13279,20 +13261,7 @@ var element = $('#41ba37e8-a457-43f8-968d-e577b00150a4');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13308,7 +13277,7 @@ var element = $('#41ba37e8-a457-43f8-968d-e577b00150a4');
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -13489,259 +13458,10 @@ var element = $('#41ba37e8-a457-43f8-968d-e577b00150a4');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">px</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;media_boot&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<div>
-        
-        
-            <div id="2d7175bb-472b-4b48-99db-0c9dc25b9095" class="plotly-graph-div" style="height:525px; width:100%;"></div>
-            <script type="text/javascript">
-                require(["plotly"], function(Plotly) {
-                    window.PLOTLYENV=window.PLOTLYENV || {};
-                    
-                if (document.getElementById("2d7175bb-472b-4b48-99db-0c9dc25b9095")) {
-                    Plotly.newPlot(
-                        '2d7175bb-472b-4b48-99db-0c9dc25b9095',
-                        [{"alignmentgroup": "True", "bingroup": "x", "hovertemplate": "media_boot=%{x}<br>count=%{y}<extra></extra>", "legendgroup": "", "marker": {"color": "#636efa"}, "name": "", "offsetgroup": "", "orientation": "v", "showlegend": false, "type": "histogram", "x": [850126.0, 834450.5, 852733.5, 523856.0, 457326.0, 373631.0, 309474.5, 292048.5, 105310.5, 242804.0, 62386.0, -119710.0, 150402.5, -50305.0, -236240.0, 118030.0, -105285.0, -355653.0, 135691.0, -117225.0, -423959.0, 766938.5, 772289.5, 777944.0, 498198.0, 395402.0, 301630.0, 291483.0, 236357.5, 80714.0, 213034.0, 19604.0, -142120.0, 135117.5, -54262.5, -326915.0, 88677.0, -126966.0, -452215.0, 79627.0, -152751.0, -462977.0, 711771.5, 727320.5, 724293.0, 459212.0, 377917.0, 252031.0, 296486.0, 138646.5, 26935.0, 171490.0, -6246.0, -214884.0, 160285.0, -113460.0, -339580.0, 87162.0, -135368.0, -422197.0, 133810.0, -130197.5, -474102.5, 671190.0, 681220.0, 667156.0, 381390.0, 317003.0, 238019.0, 205463.5, 152925.0, -39912.0, 189508.0, -20026.0, -218948.0, 113557.5, -33700.0, -309787.5, 107758.0, -203520.0, -416970.0, 104043.5, -190252.0, -561771.0, 555301.0, 533314.5, 568839.0, 298964.0, 213910.0, 116708.0, 168681.5, 40231.0, -99571.0, 102538.0, -32224.0, -272654.0, 92445.0, -103577.5, -385477.5, 84296.0, -180639.0, -460042.0, 40954.0, -207499.0, -554151.0], "xaxis": "x", "yaxis": "y"}],
-                        {"barmode": "relative", "legend": {"tracegroupgap": 0}, "margin": {"t": 60}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "title": {"text": "media_boot"}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "count"}}},
-                        {"responsive": true}
-                    ).then(function(){
-                            
-var gd = document.getElementById('2d7175bb-472b-4b48-99db-0c9dc25b9095');
-var x = new MutationObserver(function (mutations, observer) {{
-        var display = window.getComputedStyle(gd).display;
-        if (!display || display === 'none') {{
-            console.log([gd, 'removed!']);
-            Plotly.purge(gd);
-            observer.disconnect();
-        }}
-}});
-
-// Listen for the removal of the full notebook cells
-var notebookContainer = gd.closest('#notebook-container');
-if (notebookContainer) {{
-    x.observe(notebookContainer, {childList: true});
-}}
-
-// Listen for the clearing of the current output cell
-var outputEl = gd.closest('.output');
-if (outputEl) {{
-    x.observe(outputEl, {childList: true});
-}}
-
-                        })
-                };
-                });
-            </script>
-        </div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Resultados">Resultados<a class="anchor-link" href="#Resultados">&#182;</a></h2><p>Usando un piso fijo de \$8 mil y con dos opciones para el tope máximo (\$60mil y \$75mil): (el límite presupuestario se fija en \$1.5 millones)</p>
-<h3 id="Piso-\$8mil,-Tope-\$60mil:">Piso \$8mil, Tope \$60mil:<a class="anchor-link" href="#Piso-\$8mil,-Tope-\$60mil:">&#182;</a></h3><blockquote><p>Pagando \$50 por exámen:</p>
-</blockquote>
-<ul>
-<li>No hay riesgo de superar el presupuesto por mas que aumente al doble la cantidad de concursos (comparado con el 2020). En ese caso (44 concursos), el costo anual sería aproximadamente de 1 millón de pesos.</li>
-<li>Este método supera (para 22 concursos) al método anterior de \$31200 por concurso.</li>
-</ul>
-<blockquote><p>Pagando \$100 por exámen:</p>
-</blockquote>
-<ul>
-<li>si hay la misma cantidad de concursos que en 2020, no se corre riesgo alguno de pasarse del presupuesto (se gastaria cerca de la mitad del presupuesto)</li>
-<li>si hay un 50% mas de concursos que en 2020, tampoco se corre riesgo. El costo aproximado sería cercano al millón de pesos</li>
-<li>con el doble de concursos que en 2020, es más probable pasarse del limite presupuestario que de no pasarse. El costo aproximado rondaría $1.600.000, lo cual no es mucho mas que el límite, pero depende de la cantidad de presentaciones por concurso. Puede llegar a un déficit de hasta \$200mil.</li>
-</ul>
-<blockquote><p>Pagando \$150 por exámen:</p>
-</blockquote>
-<ul>
-<li>si hay la misma cantidad de concursos que en 2020, no se corre riesgo alguno de pasarse del presupuesto. El costo seria de alrededor de 1 millón.</li>
-<li>si hay un 50% mas de concursos que en 2020, el costo aprox sería cercano al límite del presupuesto. Por lo tanto, va a depender de la cantidad de presentaciones pero es bastante posible (20% de las veces) que supere el límite.</li>
-<li>con el doble de concursos que en 2020, es prácticamente imposible gastar menos que el presupuesto. El costo esperado es cercano a los 2 millones.</li>
-</ul>
-<blockquote><p>Pagando más de \$150 por exámen:</p>
-</blockquote>
-<ul>
-<li>si hay la misma cantidad de concursos que en 2020, no se corre riesgo de superar del presupuesto.</li>
-<li>sin embargo, a medida que aumenta la cantidad de instancias, aumenta mucho la probabilidad de pasarse de ese límite. En todos los casos de mas de \$150 por exámen, cuando se llega al doble de concursos que el 2020, no hay posibilidades de respetar el presupuesto. Para los casos de 33 concursos, la probabilidad de no pasarse siempre es inferior al 75%.</li>
-</ul>
-<h3 id="Piso-\$8mil,-Tope-\$75mil:">Piso \$8mil, Tope \$75mil:<a class="anchor-link" href="#Piso-\$8mil,-Tope-\$75mil:">&#182;</a></h3><blockquote><p>Pagando \$50 por exámen:</p>
-</blockquote>
-<ul>
-<li>No hay riesgo de superar el presupuesto por mas que aumente al doble la cantidad de concursos (comparado con el 2020). En ese caso (44 concursos), el costo anual sería aproximadamente de 1 millón de pesos.</li>
-<li>Este método supera (para 22 concursos) al método anterior de \$31200 por concurso. Lo gastado en el 2020 sería de $520mil.</li>
-</ul>
-<blockquote><p>Pagando \$100 por exámen:</p>
-</blockquote>
-<ul>
-<li>si hay la misma cantidad de concursos que en 2020, no se corre riesgo alguno de pasarse del presupuesto (se gastaria cerca de la mitad del presupuesto)</li>
-<li>si hay un 50% mas de concursos que en 2020, tampoco se corre mucho riesgo. La probabilidad de pasarse es solo del 3%.</li>
-<li>con el doble de concursos que en 2020, es muy probable que se supere el límite. La probabilidad de pasarse del presupuesto es del 90%.</li>
-</ul>
-<blockquote><p>Pagando \$150 por exámen:</p>
-</blockquote>
-<ul>
-<li>si hay la misma cantidad de concursos que en 2020, no se corre riesgo alguno de pasarse del presupuesto. El año costaría alrededor de \$1 millón.</li>
-<li>si hay un 50% mas de concursos que en 2020, es más probable pasarse que no hacerlo. La probabilidad de superar el límite presupuestario es del 65%.</li>
-<li>con el doble de concursos que en 2020, es prácticamente imposible gastar menos que el presupuesto.</li>
-</ul>
-<blockquote><p>Pagando más de \$150 por exámen:</p>
-</blockquote>
-<ul>
-<li>En algunos de estos casos, si se mantiene la cantidad (22) de concursos que en 2020, hay posibilidades de no superar el presupuesto. Sin embargo, a medida que aumenta la cantidad de concursos, se hace muy improbable gastar menos que el límite.</li>
-</ul>
-<h2 id="Conclusi&#243;n">Conclusi&#243;n<a class="anchor-link" href="#Conclusi&#243;n">&#182;</a></h2><p>Comparando los dos topes (\$60mil y \$75mil) y explorándo los distintos esquemas de pagos por exámen, hay tres opciones que veo viables, y la elección dependerá de la confianza que se tenga en la cantidad de concursos a desarrollarse en el futuro.</p>
-<ul>
-<li><p>Opción 1: Si se quiere ser más conservador y asegurarse que de ninguna forma se va a superar el límite marcado por el presupuesto de \$1.5 millones, la mejor opción es usar <strong>piso=8mil, pend=50, tope=75mil</strong>.</p>
-</li>
-<li><p>Opción 2: Si se considera que lo mas probable es que la cantidad de concursos no llegue a ser el doble se puede ir por el esquema <strong>piso=8mil, pend=100, tope=60mil</strong>.</p>
-</li>
-<li><p>Opción 3: Si se piensa que la cantidad de concursos sera mayor a la de 2020 pero no tanto (alrededor del 50% más), se podría considerar el esquema <strong>piso=8mil, pend=100, tope=75mil</strong> o incluso con pend=150 (más arriesgado).</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Grafico 2 . Resoluciones de denuncias por mal desempeño y/o delitos (2014-2017)</span>
-<span class="n">resoluciones</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;Desestimación fundada&#39;</span><span class="p">,</span>
-                         <span class="s1">&#39;Desestimadas in limine&#39;</span><span class="p">,</span>
-                         <span class="s1">&#39;Archivo luego de cumplidos 3 años de la denuncia&#39;</span><span class="p">,</span>
-                         <span class="s1">&#39;Cierre del expediente por resultar abstracto&#39;</span><span class="p">,</span>
-                         <span class="s1">&#39;Apertura de procedimientos por remoción&#39;</span><span class="p">,</span>
-                         <span class="s1">&#39;Sanciones&#39;</span><span class="p">])</span>
-<span class="n">cantidad_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">309</span><span class="p">,</span><span class="mi">614</span><span class="p">,</span><span class="mi">97</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
-
-<span class="n">graf2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Resoluciones&#39;</span><span class="p">:</span><span class="n">resoluciones</span><span class="p">,</span><span class="s1">&#39;Cantidad&#39;</span><span class="p">:</span><span class="n">cantidad_2</span><span class="p">})</span>
-<span class="n">graf2</span><span class="p">[</span><span class="s1">&#39;Porcentaje&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">graf2</span><span class="o">.</span><span class="n">Cantidad</span><span class="o">/</span><span class="n">graf2</span><span class="o">.</span><span class="n">Cantidad</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">graf2</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Resoluciones</th>
-      <th>Cantidad</th>
-      <th>Porcentaje</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Desestimación fundada</td>
-      <td>309</td>
-      <td>27.4</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Desestimadas in limine</td>
-      <td>614</td>
-      <td>54.5</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Archivo luego de cumplidos 3 años de la denuncia</td>
-      <td>97</td>
-      <td>8.6</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Cierre del expediente por resultar abstracto</td>
-      <td>100</td>
-      <td>8.9</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Apertura de procedimientos por remoción</td>
-      <td>4</td>
-      <td>0.4</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Sanciones</td>
-      <td>2</td>
-      <td>0.2</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
-
-<span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">graf2</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Resoluciones&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;Cantidad&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13847,20 +13567,267 @@ var n,a=t("./lib/build-log"),i=t("./lib/epsilon"),o=t("./lib/intersecter"),s=t("
 <div>
         
         
-            <div id="c9059e28-b84c-404b-8e65-17282edb98cb" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="386bfb98-b6f0-41e8-97b5-001e9220eae6" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     
-                if (document.getElementById("c9059e28-b84c-404b-8e65-17282edb98cb")) {
+                if (document.getElementById("386bfb98-b6f0-41e8-97b5-001e9220eae6")) {
                     Plotly.newPlot(
-                        'c9059e28-b84c-404b-8e65-17282edb98cb',
+                        '386bfb98-b6f0-41e8-97b5-001e9220eae6',
+                        [{"alignmentgroup": "True", "bingroup": "x", "hovertemplate": "media_boot=%{x}<br>count=%{y}<extra></extra>", "legendgroup": "", "marker": {"color": "#636efa"}, "name": "", "offsetgroup": "", "orientation": "v", "showlegend": false, "type": "histogram", "x": [850126.0, 834450.5, 852733.5, 523856.0, 457326.0, 373631.0, 309474.5, 292048.5, 105310.5, 242804.0, 62386.0, -119710.0, 150402.5, -50305.0, -236240.0, 118030.0, -105285.0, -355653.0, 135691.0, -117225.0, -423959.0, 766938.5, 772289.5, 777944.0, 498198.0, 395402.0, 301630.0, 291483.0, 236357.5, 80714.0, 213034.0, 19604.0, -142120.0, 135117.5, -54262.5, -326915.0, 88677.0, -126966.0, -452215.0, 79627.0, -152751.0, -462977.0, 711771.5, 727320.5, 724293.0, 459212.0, 377917.0, 252031.0, 296486.0, 138646.5, 26935.0, 171490.0, -6246.0, -214884.0, 160285.0, -113460.0, -339580.0, 87162.0, -135368.0, -422197.0, 133810.0, -130197.5, -474102.5, 671190.0, 681220.0, 667156.0, 381390.0, 317003.0, 238019.0, 205463.5, 152925.0, -39912.0, 189508.0, -20026.0, -218948.0, 113557.5, -33700.0, -309787.5, 107758.0, -203520.0, -416970.0, 104043.5, -190252.0, -561771.0, 555301.0, 533314.5, 568839.0, 298964.0, 213910.0, 116708.0, 168681.5, 40231.0, -99571.0, 102538.0, -32224.0, -272654.0, 92445.0, -103577.5, -385477.5, 84296.0, -180639.0, -460042.0, 40954.0, -207499.0, -554151.0], "xaxis": "x", "yaxis": "y"}],
+                        {"barmode": "relative", "legend": {"tracegroupgap": 0}, "margin": {"t": 60}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "title": {"text": "media_boot"}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "count"}}},
+                        {"responsive": true}
+                    ).then(function(){
+                            
+var gd = document.getElementById('386bfb98-b6f0-41e8-97b5-001e9220eae6');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })
+                };
+                });
+            </script>
+        </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Resultados">Resultados<a class="anchor-link" href="#Resultados">&#182;</a></h2><p>Usando un piso fijo de \$8 mil y con dos opciones para el tope máximo (\$60mil y \$75mil): (el límite presupuestario se fija en \$1.5 millones)</p>
+<h3 id="Piso-\$8mil,-Tope-\$60mil:">Piso \$8mil, Tope \$60mil:<a class="anchor-link" href="#Piso-\$8mil,-Tope-\$60mil:">&#182;</a></h3><blockquote><p>Pagando \$50 por exámen:</p>
+</blockquote>
+<ul>
+<li>No hay riesgo de superar el presupuesto por mas que aumente al doble la cantidad de concursos (comparado con el 2020). En ese caso (44 concursos), el costo anual sería aproximadamente de 1 millón de pesos.</li>
+<li>Este método supera (para 22 concursos) al método anterior de \$31200 por concurso.</li>
+</ul>
+<blockquote><p>Pagando \$100 por exámen:</p>
+</blockquote>
+<ul>
+<li>si hay la misma cantidad de concursos que en 2020, no se corre riesgo alguno de pasarse del presupuesto (se gastaria cerca de la mitad del presupuesto)</li>
+<li>si hay un 50% mas de concursos que en 2020, tampoco se corre riesgo. El costo aproximado sería cercano al millón de pesos</li>
+<li>con el doble de concursos que en 2020, es más probable pasarse del limite presupuestario que de no pasarse. El costo aproximado rondaría $1.600.000, lo cual no es mucho mas que el límite, pero depende de la cantidad de presentaciones por concurso. Puede llegar a un déficit de hasta \$200mil.</li>
+</ul>
+<blockquote><p>Pagando \$150 por exámen:</p>
+</blockquote>
+<ul>
+<li>si hay la misma cantidad de concursos que en 2020, no se corre riesgo alguno de pasarse del presupuesto. El costo seria de alrededor de 1 millón.</li>
+<li>si hay un 50% mas de concursos que en 2020, el costo aprox sería cercano al límite del presupuesto. Por lo tanto, va a depender de la cantidad de presentaciones pero es bastante posible (20% de las veces) que supere el límite.</li>
+<li>con el doble de concursos que en 2020, es prácticamente imposible gastar menos que el presupuesto. El costo esperado es cercano a los 2 millones.</li>
+</ul>
+<blockquote><p>Pagando más de \$150 por exámen:</p>
+</blockquote>
+<ul>
+<li>si hay la misma cantidad de concursos que en 2020, no se corre riesgo de superar del presupuesto.</li>
+<li>sin embargo, a medida que aumenta la cantidad de instancias, aumenta mucho la probabilidad de pasarse de ese límite. En todos los casos de mas de \$150 por exámen, cuando se llega al doble de concursos que el 2020, no hay posibilidades de respetar el presupuesto. Para los casos de 33 concursos, la probabilidad de no pasarse siempre es inferior al 75%.</li>
+</ul>
+<h3 id="Piso-\$8mil,-Tope-\$75mil:">Piso \$8mil, Tope \$75mil:<a class="anchor-link" href="#Piso-\$8mil,-Tope-\$75mil:">&#182;</a></h3><blockquote><p>Pagando \$50 por exámen:</p>
+</blockquote>
+<ul>
+<li>No hay riesgo de superar el presupuesto por mas que aumente al doble la cantidad de concursos (comparado con el 2020). En ese caso (44 concursos), el costo anual sería aproximadamente de 1 millón de pesos.</li>
+<li>Este método supera (para 22 concursos) al método anterior de \$31200 por concurso. Lo gastado en el 2020 sería de $520mil.</li>
+</ul>
+<blockquote><p>Pagando \$100 por exámen:</p>
+</blockquote>
+<ul>
+<li>si hay la misma cantidad de concursos que en 2020, no se corre riesgo alguno de pasarse del presupuesto (se gastaria cerca de la mitad del presupuesto)</li>
+<li>si hay un 50% mas de concursos que en 2020, tampoco se corre mucho riesgo. La probabilidad de pasarse es solo del 3%.</li>
+<li>con el doble de concursos que en 2020, es muy probable que se supere el límite. La probabilidad de pasarse del presupuesto es del 90%.</li>
+</ul>
+<blockquote><p>Pagando \$150 por exámen:</p>
+</blockquote>
+<ul>
+<li>si hay la misma cantidad de concursos que en 2020, no se corre riesgo alguno de pasarse del presupuesto. El año costaría alrededor de \$1 millón.</li>
+<li>si hay un 50% mas de concursos que en 2020, es más probable pasarse que no hacerlo. La probabilidad de superar el límite presupuestario es del 65%.</li>
+<li>con el doble de concursos que en 2020, es prácticamente imposible gastar menos que el presupuesto.</li>
+</ul>
+<blockquote><p>Pagando más de \$150 por exámen:</p>
+</blockquote>
+<ul>
+<li>En algunos de estos casos, si se mantiene la cantidad (22) de concursos que en 2020, hay posibilidades de no superar el presupuesto. Sin embargo, a medida que aumenta la cantidad de concursos, se hace muy improbable gastar menos que el límite.</li>
+</ul>
+<h2 id="Conclusi&#243;n">Conclusi&#243;n<a class="anchor-link" href="#Conclusi&#243;n">&#182;</a></h2><p>Comparando los dos topes (\$60mil y \$75mil) y explorándo los distintos esquemas de pagos por exámen, hay tres opciones que veo viables, y la elección dependerá de la confianza que se tenga en la cantidad de concursos a desarrollarse en el futuro.</p>
+<ul>
+<li><p>Opción 1: Si se quiere ser más conservador y asegurarse que de ninguna forma se va a superar el límite marcado por el presupuesto de \$1.5 millones, la mejor opción es usar <strong>piso=8mil, pend=50, tope=75mil</strong>.</p>
+</li>
+<li><p>Opción 2: Si se considera que lo mas probable es que la cantidad de concursos no llegue a ser el doble se puede ir por el esquema <strong>piso=8mil, pend=100, tope=60mil</strong>.</p>
+</li>
+<li><p>Opción 3: Si se piensa que la cantidad de concursos sera mayor a la de 2020 pero no tanto (alrededor del 50% más), se podría considerar el esquema <strong>piso=8mil, pend=100, tope=75mil</strong> o incluso con pend=150 (más arriesgado).</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Grafico 2 . Resoluciones de denuncias por mal desempeño y/o delitos (2014-2017)</span>
+<span class="n">resoluciones</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;Desestimación fundada&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39;Desestimadas in limine&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39;Archivo luego de cumplidos 3 años de la denuncia&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39;Cierre del expediente por resultar abstracto&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39;Apertura de procedimientos por remoción&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39;Sanciones&#39;</span><span class="p">])</span>
+<span class="n">cantidad_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">309</span><span class="p">,</span><span class="mi">614</span><span class="p">,</span><span class="mi">97</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="n">graf2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Resoluciones&#39;</span><span class="p">:</span><span class="n">resoluciones</span><span class="p">,</span><span class="s1">&#39;Cantidad&#39;</span><span class="p">:</span><span class="n">cantidad_2</span><span class="p">})</span>
+<span class="n">graf2</span><span class="p">[</span><span class="s1">&#39;Porcentaje&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">graf2</span><span class="o">.</span><span class="n">Cantidad</span><span class="o">/</span><span class="n">graf2</span><span class="o">.</span><span class="n">Cantidad</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">graf2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Resoluciones</th>
+      <th>Cantidad</th>
+      <th>Porcentaje</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Desestimación fundada</td>
+      <td>309</td>
+      <td>27.4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Desestimadas in limine</td>
+      <td>614</td>
+      <td>54.5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Archivo luego de cumplidos 3 años de la denuncia</td>
+      <td>97</td>
+      <td>8.6</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Cierre del expediente por resultar abstracto</td>
+      <td>100</td>
+      <td>8.9</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Apertura de procedimientos por remoción</td>
+      <td>4</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Sanciones</td>
+      <td>2</td>
+      <td>0.2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">graf2</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Resoluciones&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;Cantidad&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+        
+        
+            <div id="64190763-5a0a-4b33-afab-0c47bf555ac4" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <script type="text/javascript">
+                require(["plotly"], function(Plotly) {
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    
+                if (document.getElementById("64190763-5a0a-4b33-afab-0c47bf555ac4")) {
+                    Plotly.newPlot(
+                        '64190763-5a0a-4b33-afab-0c47bf555ac4',
                         [{"alignmentgroup": "True", "hovertemplate": "Resoluciones=%{x}<br>Cantidad=%{y}<extra></extra>", "legendgroup": "", "marker": {"color": "#636efa"}, "name": "", "offsetgroup": "", "orientation": "v", "showlegend": false, "textposition": "auto", "type": "bar", "x": ["Desestimaci\u00f3n fundada", "Desestimadas\u00a0in limine", "Archivo luego de cumplidos 3 a\u00f1os de la denuncia", "Cierre del expediente por resultar abstracto", "Apertura de procedimientos por remoci\u00f3n", "Sanciones"], "xaxis": "x", "y": [309, 614, 97, 100, 4, 2], "yaxis": "y"}],
                         {"barmode": "relative", "legend": {"tracegroupgap": 0}, "margin": {"t": 60}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "title": {"text": "Resoluciones"}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "Cantidad"}}},
                         {"responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('c9059e28-b84c-404b-8e65-17282edb98cb');
+var gd = document.getElementById('64190763-5a0a-4b33-afab-0c47bf555ac4');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
