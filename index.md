@@ -10,4 +10,4 @@ Head of AI @ Y-TEC
 
 ---
 
-[Test post](2025-08-20-test/)
+[Test post](/2025/08/20/test/)
