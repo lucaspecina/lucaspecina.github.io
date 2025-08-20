@@ -4,6 +4,10 @@ title: "Lucas"
 
 # Lucas Pecina
 
-AI research
+AI research - [GitHub](https://github.com/lucaspecina) - Argentina
 
-- [GitHub](https://github.com/lucaspecina)  
+Head of AI @ Y-TEC
+
+---
+
+[Test post](2025-08-20-test/)
