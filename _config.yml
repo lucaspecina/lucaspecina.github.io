@@ -1,6 +1,2 @@
-title: "Lucas Pecina - AI Research"
-description: "AI research, notes, and progress."
 markdown: kramdown
-permalink: /blog/:title/
-url: "https://lucaspecina.github.io"
-baseurl: "/lucaspecina"
+theme: null
