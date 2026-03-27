@@ -1,9 +1,5 @@
 ---
-title: "Lucas Pecina"
----
-
-Head of AI @ Y-TEC. Researching AI systems, agents and infrastructure.
-
+title: "Notes"
 ---
 
 ## notes

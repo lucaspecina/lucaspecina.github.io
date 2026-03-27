@@ -1,13 +1,30 @@
 <!doctype html>
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
+  <header>
+    <h1><a href="/">Lucas Pecina</a></h1>
+    <p>AI research</p>
+  </header>
+
+  <nav>
+    <a href="/">home</a><span class="sep">|</span><a href="/notes">notes</a><span class="sep">|</span><a href="https://github.com/lucaspecina">github</a>
+  </nav>
+
+  <hr>
+
   <main>
     {{ content }}
   </main>
+
+  <footer>
+    <hr>
+    Buenos Aires, Argentina
+  </footer>
 </body>
 </html>
